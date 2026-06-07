@@ -41,8 +41,10 @@ $concertos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         .table { background-color: #ffffff; border-radius: 8px; overflow: hidden; }
         .table thead th { background-color: #111; color: #ffffff; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; letter-spacing: 1px; }
         .table tbody tr:hover { background-color: #fde8f0; }
-        .btn-gerir { background-color: #f72585; color: white; border: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        .btn-gerir:hover { background-color: #d4006e; color: white; }
+        .btn-pink { background-color: #f72585; color: white; border: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-pink:hover { background-color: #d4006e; color: white; }
+        .btn-orange { background-color: #f4a019; color: white; border: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; }
+        .btn-orange:hover { background-color: #d4880a; color: white; }
     </style>
 </head>
 <body>
@@ -60,7 +62,10 @@ $concertos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <p class="titulo-principal mb-0">Gestão de Concertos</p>
-        <a href="adicionar.php" class="btn btn-gerir">+ Adicionar</a>
+        <div>
+            <a href="artistas.php" class="btn btn-orange me-2">Gerir Artistas</a>
+            <a href="adicionar.php" class="btn btn-pink">+ Adicionar Concerto</a>
+        </div>
     </div>
 
     <table class="table table-bordered table-hover">
@@ -81,7 +86,7 @@ $concertos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo htmlspecialchars($c['artista']); ?></td>
                     <td><?php echo htmlspecialchars($c['palco']); ?></td>
                     <td>
-                        <a href="editar.php?id=<?php echo $c['id']; ?>" class="btn btn-sm" style="background-color:#f4a019; color:#fff;">Editar</a>
+                        <a href="editar.php?id=<?php echo $c['id']; ?>" class="btn btn-sm btn-orange">Editar</a>
                         <a href="admin.php?apagar=<?php echo $c['id']; ?>" class="btn btn-sm btn-danger"
                            onclick="return confirm('Tens a certeza?')">Apagar</a>
                     </td>
