@@ -1,6 +1,6 @@
 <?php
 
-// Classe para criar a conexão com a base de dados
+// Classe para criar a ligacao com a base de dados
 class Database {
     // Definir as variaveis de ligacao
     private $host = "localhost"; // Servidor local

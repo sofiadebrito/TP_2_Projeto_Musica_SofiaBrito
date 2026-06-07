@@ -21,18 +21,17 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Fonte Barlow Condensed parecida com a do site oficial -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Fundo bege claro inspirado no site oficial do festival */
+        /* Fundo bege claro */
         body { background-color: #f5f0ea; font-family: 'Barlow', sans-serif; }
         /* Barra de navegacao superior */
         .navbar-topo { background-color: #ffffff; border-bottom: 2px solid #e0d8cf; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
-        /* Estilo do logo */
         .logo-texto { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.4rem; text-transform: uppercase; line-height: 1.1; color: #111; }
-        /* Banner com gradiente de rosa e laranja inspirado no site oficial */
+        /* Fui buscar este banner para me inspirar no site oficial do primavera */
         .banner { background: linear-gradient(135deg, #f72585, #f4a019, #f72585); color: white; text-align: center; padding: 18px; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
-        /* Botão rosa para ver o horário, inspirado nas cores do site oficial */
+        /* Botão rosa para ver o horário */
         .btn-pink { background-color: #f72585; color: white; border: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
         .btn-pink:hover { background-color: #d4006e; color: white; }
-        /* Estilo para o cartaz do festival, com bordas arredondadas e sombra para destacar a imagem */
+        /* Bordas redondas e sombra para a imagem */
         .cartaz { max-width: 420px; width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
     </style>
 </head>
