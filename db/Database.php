@@ -6,7 +6,7 @@ class Database {
     private $host = "localhost"; // Servidor local
     private $db_name = "music_db"; // Nome da base de dados
     private $username = "root"; // Nome do utilizador
-    private $password = ""; // Palavra-passe
+    private $password = "admin"; // Palavra-passe
     public $conn; // Variavel para guardar a ligacao
 
     // Função para criar a ligação com a base de dados
