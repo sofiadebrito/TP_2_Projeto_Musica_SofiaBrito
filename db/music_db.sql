@@ -135,8 +135,3 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2026-06-09 12:20:39
-
-
--- http://localhost/TP_2_Projeto_Musica_SofiaBrito/index.php
--- sofia
--- 123456

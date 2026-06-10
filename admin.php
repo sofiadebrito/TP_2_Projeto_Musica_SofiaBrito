@@ -22,46 +22,15 @@ $query = "SELECT c.id, c.dia_data, c.hora, a.nome AS artista, p.nome AS palco
 $stmt = $db->prepare($query);
 $stmt->execute();
 $concertos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$titulo = "Gestão de Concertos";
+$pagina = "admin";
+require_once 'includes/header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin - Primavera Sound</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #f5f0ea; font-family: 'Barlow', sans-serif; }
-        .navbar-topo { background-color: #ffffff; border-bottom: 2px solid #e0d8cf; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-texto { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.4rem; text-transform: uppercase; line-height: 1.1; color: #111; }
-        .banner { background: linear-gradient(135deg, #f72585, #f4a019, #f72585); color: white; text-align: center; padding: 18px; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
-        .titulo-principal { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3rem; text-transform: uppercase; color: #111; line-height: 1; }
-        .table { background-color: #ffffff; border-radius: 8px; overflow: hidden; }
-        .table thead th { background-color: #111; color: #ffffff; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; letter-spacing: 1px; }
-        .table tbody tr:hover { background-color: #fde8f0; }
-        .btn-pink { background-color: #f72585; color: white; border: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        .btn-pink:hover { background-color: #d4006e; color: white; }
-        .btn-orange { background-color: #f4a019; color: white; border: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; }
-        .btn-orange:hover { background-color: #d4880a; color: white; }
-    </style>
-</head>
-<body>
-
-<div class="navbar-topo">
-    <div class="logo-texto">Primavera<br>Sound</div>
-    <div>
-        <a href="index.php" class="btn btn-outline-secondary btn-sm me-2">Início</a>
-        <a href="logout.php" class="btn btn-outline-secondary btn-sm">Logout</a>
-    </div>
-</div>
-
-<div class="banner">Porto · 11 a 14 de Junho de 2026</div>
 
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <p class="titulo-principal mb-0">Gestão de Concertos</p>
+        <p class="titulo-principal mb-0" style="font-size:3rem; line-height:1;">Gestão de Concertos</p>
         <div>
             <a href="artistas.php" class="btn btn-orange me-2">Gerir Artistas</a>
             <a href="adicionar.php" class="btn btn-pink">+ Adicionar Concerto</a>
@@ -96,5 +65,4 @@ $concertos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </table>
 </div>
 
-</body>
-</html>
+<?php require_once 'includes/footer.php'; ?>

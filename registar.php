@@ -7,7 +7,7 @@ $erro = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $db = (new Database())->getConnection();
-    
+
     $username = htmlspecialchars($_POST['username']);
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
@@ -20,34 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $erro = "Esse username já existe. Tenta outro.";
     }
 }
+
+$titulo = "Criar Conta";
+$pagina = "registar";
+require_once 'includes/header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registar - Primavera Sound</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #f5f0ea; font-family: 'Barlow', sans-serif; }
-        .navbar-topo { background-color: #ffffff; border-bottom: 2px solid #e0d8cf; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-texto { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.4rem; text-transform: uppercase; line-height: 1.1; color: #111; }
-        .banner { background: linear-gradient(135deg, #f72585, #f4a019, #f72585); color: white; text-align: center; padding: 18px; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
-        .titulo-principal { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.5rem; text-transform: uppercase; color: #111; }
-        .card { border: none; border-radius: 12px; }
-        .btn-pink { background-color: #f72585; color: white; border: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-        .btn-pink:hover { background-color: #d4006e; color: white; }
-    </style>
-</head>
-<body>
-
-<div class="navbar-topo">
-    <div class="logo-texto">Primavera<br>Sound</div>
-</div>
-
-<div class="banner">Porto · 11 a 14 de Junho de 2026</div>
 
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -86,5 +63,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 </div>
 
-</body>
-</html>
+<?php require_once 'includes/footer.php'; ?>
