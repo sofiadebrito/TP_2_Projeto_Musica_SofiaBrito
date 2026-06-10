@@ -1,4 +1,6 @@
-<?php ?>
+<?php 
+// este file esta incluido em todas as paginas.
+?>
 
 <!DOCTYPE html>
 <html lang="pt">
